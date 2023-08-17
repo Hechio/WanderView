@@ -21,8 +21,6 @@
 		8BBCFC2A2A8BFF7000174727 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC292A8BFF7000174727 /* NewsFeedViewController.swift */; };
 		8BBCFC2F2A8BFF7100174727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BBCFC2E2A8BFF7100174727 /* Assets.xcassets */; };
 		8BBCFC322A8BFF7100174727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BBCFC302A8BFF7100174727 /* LaunchScreen.storyboard */; };
-		8BBCFC472A8BFF7100174727 /* WanderViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC462A8BFF7100174727 /* WanderViewUITests.swift */; };
-		8BBCFC492A8BFF7100174727 /* WanderViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC482A8BFF7100174727 /* WanderViewUITestsLaunchTests.swift */; };
 		8BBCFC612A8C107C00174727 /* TouristListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC602A8C107C00174727 /* TouristListViewController.swift */; };
 		8BBCFC632A8C11BE00174727 /* TouristProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC622A8C11BE00174727 /* TouristProfileViewController.swift */; };
 		8BBCFC652A8C839C00174727 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC642A8C839C00174727 /* ViewHelper.swift */; };
@@ -79,8 +77,6 @@
 		8BBCFC332A8BFF7100174727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BBCFC382A8BFF7100174727 /* WanderViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBCFC422A8BFF7100174727 /* WanderViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BBCFC462A8BFF7100174727 /* WanderViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderViewUITests.swift; sourceTree = "<group>"; };
-		8BBCFC482A8BFF7100174727 /* WanderViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8BBCFC602A8C107C00174727 /* TouristListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristListViewController.swift; sourceTree = "<group>"; };
 		8BBCFC622A8C11BE00174727 /* TouristProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristProfileViewController.swift; sourceTree = "<group>"; };
 		8BBCFC642A8C839C00174727 /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
@@ -203,7 +199,6 @@
 			children = (
 				8BBCFC242A8BFF7000174727 /* WanderView */,
 				8BBCFC3B2A8BFF7100174727 /* WanderViewTests */,
-				8BBCFC452A8BFF7100174727 /* WanderViewUITests */,
 				8BBCFC232A8BFF7000174727 /* Products */,
 				8BA493072A8EA0AA00BEF9B7 /* Frameworks */,
 			);
@@ -239,15 +234,6 @@
 				8BA493002A8E983000BEF9B7 /* ViewModels */,
 			);
 			path = WanderViewTests;
-			sourceTree = "<group>";
-		};
-		8BBCFC452A8BFF7100174727 /* WanderViewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8BBCFC462A8BFF7100174727 /* WanderViewUITests.swift */,
-				8BBCFC482A8BFF7100174727 /* WanderViewUITestsLaunchTests.swift */,
-			);
-			path = WanderViewUITests;
 			sourceTree = "<group>";
 		};
 		8BBCFC552A8C002A00174727 /* AppDelegate */ = {
@@ -555,8 +541,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BBCFC492A8BFF7100174727 /* WanderViewUITestsLaunchTests.swift in Sources */,
-				8BBCFC472A8BFF7100174727 /* WanderViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
