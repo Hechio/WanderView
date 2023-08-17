@@ -51,13 +51,6 @@
 			remoteGlobalIDString = 8BBCFC212A8BFF7000174727;
 			remoteInfo = WanderView;
 		};
-		8BBCFC432A8BFF7100174727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BBCFC1A2A8BFF7000174727 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8BBCFC212A8BFF7000174727;
-			remoteInfo = WanderView;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +69,6 @@
 		8BBCFC312A8BFF7100174727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BBCFC332A8BFF7100174727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BBCFC382A8BFF7100174727 /* WanderViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BBCFC422A8BFF7100174727 /* WanderViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBCFC602A8C107C00174727 /* TouristListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristListViewController.swift; sourceTree = "<group>"; };
 		8BBCFC622A8C11BE00174727 /* TouristProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristProfileViewController.swift; sourceTree = "<group>"; };
 		8BBCFC642A8C839C00174727 /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
@@ -113,13 +105,6 @@
 			files = (
 				8BA4930B2A8EA0AE00BEF9B7 /* RealmSwift in Frameworks */,
 				8BA493092A8EA0AA00BEF9B7 /* Realm in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BBCFC3F2A8BFF7100174727 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +194,6 @@
 			children = (
 				8BBCFC222A8BFF7000174727 /* WanderView.app */,
 				8BBCFC382A8BFF7100174727 /* WanderViewTests.xctest */,
-				8BBCFC422A8BFF7100174727 /* WanderViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -404,24 +388,6 @@
 			productReference = 8BBCFC382A8BFF7100174727 /* WanderViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8BBCFC412A8BFF7100174727 /* WanderViewUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8BBCFC522A8BFF7100174727 /* Build configuration list for PBXNativeTarget "WanderViewUITests" */;
-			buildPhases = (
-				8BBCFC3E2A8BFF7100174727 /* Sources */,
-				8BBCFC3F2A8BFF7100174727 /* Frameworks */,
-				8BBCFC402A8BFF7100174727 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8BBCFC442A8BFF7100174727 /* PBXTargetDependency */,
-			);
-			name = WanderViewUITests;
-			productName = WanderViewUITests;
-			productReference = 8BBCFC422A8BFF7100174727 /* WanderViewUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -436,10 +402,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					8BBCFC372A8BFF7100174727 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 8BBCFC212A8BFF7000174727;
-					};
-					8BBCFC412A8BFF7100174727 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 8BBCFC212A8BFF7000174727;
 					};
@@ -463,7 +425,6 @@
 			targets = (
 				8BBCFC212A8BFF7000174727 /* WanderView */,
 				8BBCFC372A8BFF7100174727 /* WanderViewTests */,
-				8BBCFC412A8BFF7100174727 /* WanderViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -479,13 +440,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8BBCFC362A8BFF7100174727 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BBCFC402A8BFF7100174727 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -537,13 +491,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BBCFC3E2A8BFF7100174727 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -551,11 +498,6 @@
 			isa = PBXTargetDependency;
 			target = 8BBCFC212A8BFF7000174727 /* WanderView */;
 			targetProxy = 8BBCFC392A8BFF7100174727 /* PBXContainerItemProxy */;
-		};
-		8BBCFC442A8BFF7100174727 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8BBCFC212A8BFF7000174727 /* WanderView */;
-			targetProxy = 8BBCFC432A8BFF7100174727 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -781,42 +723,6 @@
 			};
 			name = Release;
 		};
-		8BBCFC532A8BFF7100174727 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4582NNJ7T6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stevehechio.apps.WanderViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WanderView;
-			};
-			name = Debug;
-		};
-		8BBCFC542A8BFF7100174727 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4582NNJ7T6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stevehechio.apps.WanderViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WanderView;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -843,15 +749,6 @@
 			buildConfigurations = (
 				8BBCFC502A8BFF7100174727 /* Debug */,
 				8BBCFC512A8BFF7100174727 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8BBCFC522A8BFF7100174727 /* Build configuration list for PBXNativeTarget "WanderViewUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BBCFC532A8BFF7100174727 /* Debug */,
-				8BBCFC542A8BFF7100174727 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
