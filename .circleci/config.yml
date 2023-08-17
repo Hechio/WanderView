@@ -7,6 +7,7 @@ jobs:
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
+      IOS_SIMULATOR_IDENTIFIER: DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder
     steps:
       - checkout
       - run: bundle install

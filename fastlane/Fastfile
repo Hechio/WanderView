@@ -8,7 +8,6 @@ platform :ios do
     scan(
       scheme: "WanderViewTests",
       clean: true,
-      devices: ["iPhone 12"],
       code_coverage: true
     )
   end
