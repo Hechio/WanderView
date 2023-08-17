@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         touristListViewController.tabBarItem = UITabBarItem(title: "Tourists", image: UIImage(named: "tourist_icon"), tag: 0)
         newsFeedViewController.tabBarItem = UITabBarItem(title: "News Feed", image: UIImage(named: "news_icon"), tag: 1)
+        tabBarController.tabBar.backgroundColor = .white
         
         tabBarController.viewControllers = [newsFeedViewController,touristListViewController]
         window = UIWindow(frame: UIScreen.main.bounds)
