@@ -28,12 +28,12 @@ class TouristsListViewModel: ObservableObject {
     
     init(){
         fetchData(page: 1) // Fetch initial data
-        //let persistedData = fetchPersistedData()
-//        if persistedData.isEmpty {
-//            fetchData(page: 1) // Fetch initial data
-//        } else {
-//            self.cellViewModels = createCellViewModels(from: persistedData)
-//        }
+        let persistedData = fetchPersistedData()
+        if persistedData.isEmpty {
+            fetchData(page: 1) // Fetch initial data
+        } else {
+            self.cellViewModels = createCellViewModels(from: persistedData)
+        }
     }
     
     func fetchData(page: Int) {
