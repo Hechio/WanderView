@@ -1,23 +1,59 @@
 # .circleci/config.yml
 version: 2.1
+executors:
+  ios-executor:
+    docker:
+      - image: circleci/apple:latest
+    working_directory: ~/project
 
 jobs:
-  build-and-test:
-    macos:
-      xcode: 14.0.1
+  build:
+    executor: ios-executor
     steps:
       - checkout
-
-      # Build and test your iOS app
+      - restore_cache:
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - run:
-          name: Build and Test
+          name: Install Dependencies
+          command: bundle install --path vendor/bundle
+      - run:
+          name: Build iOS Project
           command: |
-            xcodebuild clean build -scheme WanderView -workspace WanderView.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11'
-            xcodebuild test -scheme WanderView -workspace WanderView.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11'
+            xcodebuild -workspace WanderView.xcworkspace -scheme WanderView -destination 'platform=iOS Simulator,name=iPhone 12' build
+
+  clean:
+    executor: ios-executor
+    steps:
+      - checkout
+      - run:
+          name: Clean Project
+          command: |
+            xcodebuild clean -workspace WanderView.xcworkspace -scheme WanderView
+
+  run_tests:
+    executor: ios-executor
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install Dependencies
+          command: bundle install --path vendor/bundle
+      - run:
+          name: Run Unit Tests
+          command: |
+            xcodebuild -workspace WanderView.xcworkspace -scheme WanderView -destination 'platform=iOS Simulator,name=iPhone 12' test
 
 workflows:
-  build-test:
+  version: 2
+  build-clean-test:
     jobs:
-      - build-and-test
+      - build
+      - clean
+      - run_tests:
+          requires:
+            - build
+            - clean
+
 
 
