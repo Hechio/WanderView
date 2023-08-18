@@ -7,6 +7,11 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      use_clang_report_name: true,
+      output_types: 'junit',
+      output_files: 'report.xml'
+    )
   end
 end
+

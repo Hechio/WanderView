@@ -90,12 +90,12 @@ class MultimediaCell: UICollectionViewCell {
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
+            imageView.heightAnchor.constraint(equalToConstant: 150),
             
             videoPlayerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             videoPlayerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             videoPlayerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            videoPlayerView.heightAnchor.constraint(equalToConstant: 100)
+            videoPlayerView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
 }

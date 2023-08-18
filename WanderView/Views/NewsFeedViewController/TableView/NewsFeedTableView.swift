@@ -97,6 +97,10 @@ extension NewsFeedTableView : UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellViewModel = viewModel.getCellViewModel(at: indexPath)
+        if cellViewModel.multimediaURLs.isEmpty {
+            return 200
+        }
         return 350
     }
     
