@@ -27,13 +27,12 @@ class TouristsListViewModel: ObservableObject {
     @Published var cellViewModels: [TouristCellViewModel] = []
     
     init(){
-        fetchData(page: 1) // Fetch initial data
-//        let persistedData = fetchPersistedData()
-//        if persistedData.isEmpty {
-//            fetchData(page: 1) // Fetch initial data
-//        } else {
-//            self.cellViewModels = createCellViewModels(from: persistedData)
-//        }
+        if NetworkConnectivity.shared.isReachable() {
+            fetchData(page: 1) // Fetch initial data
+        } else {
+            let persistedData = fetchPersistedData()
+            self.cellViewModels = createCellViewModels(from: persistedData)
+        }
     }
     
     func fetchData(page: Int) {

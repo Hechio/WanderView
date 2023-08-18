@@ -40,7 +40,18 @@ class NewsFeedCell: UITableViewCell {
                 multimediaItems = multimedia
                 multimediaSlideView.reloadData()
                 pageControl.numberOfPages = multimedia.count
-                pageControl.isHidden = multimedia.count <= 1
+                pageControl.isHidden = true
+                //pageControl.isHidden = multimedia.count <= 1
+                if !multimedia.isEmpty {
+                    NSLayoutConstraint.activate([
+                        multimediaSlideView.heightAnchor.constraint(equalToConstant: 160)
+                    ])
+                }else {
+                    NSLayoutConstraint.activate([
+                        multimediaSlideView.heightAnchor.constraint(equalToConstant: 0)
+                    ])
+                }
+                
             }
             
         }
@@ -119,12 +130,12 @@ class NewsFeedCell: UITableViewCell {
             infoStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             
             titleLabel.topAnchor.constraint(equalTo: infoStackView.bottomAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
             
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
             
             
             multimediaSlideView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 8),

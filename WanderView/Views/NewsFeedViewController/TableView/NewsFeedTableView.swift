@@ -65,6 +65,7 @@ class NewsFeedTableView: UIView {
         tableView.contentInset.bottom = 20
         
         addSubview(tableView)
+        self.tableView.rowHeight = UITableView.automaticDimension
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
@@ -96,13 +97,6 @@ extension NewsFeedTableView : UITableViewDataSource, UITableViewDelegate {
         cell.cellViewModel = cellViewModel
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellViewModel = viewModel.getCellViewModel(at: indexPath)
-        if cellViewModel.multimediaURLs.isEmpty {
-            return 200
-        }
-        return 350
-    }
     
 }
 
@@ -120,6 +114,7 @@ extension NewsFeedTableView: NewsFeedViewModelDelegate {
     func dataDidLoad() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.tableView.rowHeight = UITableView.automaticDimension
             ActivityIndicatorHelper.shared.hide()
         }
     }

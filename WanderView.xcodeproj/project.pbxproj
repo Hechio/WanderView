@@ -17,6 +17,7 @@
 		8BA493092A8EA0AA00BEF9B7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA493082A8EA0AA00BEF9B7 /* Realm */; };
 		8BA4930B2A8EA0AE00BEF9B7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA4930A2A8EA0AE00BEF9B7 /* RealmSwift */; };
 		8BA4930D2A8F3DC900BEF9B7 /* TouristProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4930C2A8F3DC900BEF9B7 /* TouristProfileViewModel.swift */; };
+		8BA493122A8F7FE000BEF9B7 /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA493112A8F7FE000BEF9B7 /* NetworkConnectivity.swift */; };
 		8BBCFC262A8BFF7000174727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC252A8BFF7000174727 /* AppDelegate.swift */; };
 		8BBCFC282A8BFF7000174727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC272A8BFF7000174727 /* SceneDelegate.swift */; };
 		8BBCFC2A2A8BFF7000174727 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCFC292A8BFF7000174727 /* NewsFeedViewController.swift */; };
@@ -63,6 +64,7 @@
 		8BA492FE2A8E63B700BEF9B7 /* DbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbHelper.swift; sourceTree = "<group>"; };
 		8BA493012A8E985600BEF9B7 /* TouristsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristsListViewModelTests.swift; sourceTree = "<group>"; };
 		8BA4930C2A8F3DC900BEF9B7 /* TouristProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristProfileViewModel.swift; sourceTree = "<group>"; };
+		8BA493112A8F7FE000BEF9B7 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
 		8BBCFC222A8BFF7000174727 /* WanderView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanderView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBCFC252A8BFF7000174727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BBCFC272A8BFF7000174727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8BA493102A8F7FB600BEF9B7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8BA493112A8F7FE000BEF9B7 /* NetworkConnectivity.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8BBCFC192A8BFF7000174727 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		8BBCFC242A8BFF7000174727 /* WanderView */ = {
 			isa = PBXGroup;
 			children = (
+				8BA493102A8F7FB600BEF9B7 /* Utils */,
 				8BBCFC552A8C002A00174727 /* AppDelegate */,
 				8BBCFC5A2A8C00D300174727 /* Views */,
 				8BBCFC592A8C00BA00174727 /* ViewModels */,
@@ -456,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA493122A8F7FE000BEF9B7 /* NetworkConnectivity.swift in Sources */,
 				8BA492F72A8E5AB500BEF9B7 /* RealmTourist.swift in Sources */,
 				8BA492F22A8E548C00BEF9B7 /* TouristCellViewModel.swift in Sources */,
 				8BBCFC632A8C11BE00174727 /* TouristProfileViewController.swift in Sources */,

@@ -26,11 +26,10 @@ class NewsFeedViewModel : ObservableObject {
     @Published var cellViewModels: [NewsFeedCellViewModel] = []
     
     init() {
-        fetchData(page: 1)
-        let persistedData = fetchPersistedData()
-        if persistedData.isEmpty {
-            fetchData(page: 1) 
+        if NetworkConnectivity.shared.isReachable() {
+            fetchData(page: 1) // Fetch initial data
         } else {
+            let persistedData = fetchPersistedData()
             self.cellViewModels = createCellViewModels(from: persistedData)
         }
     }
