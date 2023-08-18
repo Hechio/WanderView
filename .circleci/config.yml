@@ -1,18 +1,13 @@
-# .circleci/config.yml
 version: 2.1
-executors:
-  ios-executor:
-    docker:
-      - image: circleci/apple:latest
-    working_directory: ~/project
-
 jobs:
   build:
-    executor: ios-executor
+    macos:
+      xcode: 12.5.0
     steps:
       - checkout
-      - restore_cache:
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install Bundler
+          command: gem install bundler
       - run:
           name: Install Dependencies
           command: bundle install --path vendor/bundle
@@ -22,7 +17,8 @@ jobs:
             xcodebuild -workspace WanderView.xcworkspace -scheme WanderView -destination 'platform=iOS Simulator,name=iPhone 12' build
 
   clean:
-    executor: ios-executor
+    macos:
+      xcode: 12.5.0
     steps:
       - checkout
       - run:
@@ -31,11 +27,13 @@ jobs:
             xcodebuild clean -workspace WanderView.xcworkspace -scheme WanderView
 
   run_tests:
-    executor: ios-executor
+    macos:
+      xcode: 12.5.0
     steps:
       - checkout
-      - restore_cache:
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install Bundler
+          command: gem install bundler
       - run:
           name: Install Dependencies
           command: bundle install --path vendor/bundle
@@ -54,6 +52,3 @@ workflows:
           requires:
             - build
             - clean
-
-
-
