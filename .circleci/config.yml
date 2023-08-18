@@ -7,7 +7,6 @@ jobs:
       xcode: 14.0.1
     steps:
       - checkout
-      - run: pod install
 
       # Build and test your iOS app
       - run:
