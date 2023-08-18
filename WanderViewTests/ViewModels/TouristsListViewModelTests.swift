@@ -35,7 +35,7 @@ class TouristsListViewModelTests: XCTestCase {
 
         let jsonData = try! JSONEncoder().encode(mockTouristData) // Convert to Data
         viewModel.dataApi = MockDataLoader(mockResponse: .success(jsonData))
-        viewModel.delegate = self // Assign a delegate to handle the expectation
+        viewModel.delegate = self
         viewModel.fetchData(page: 1)
         
         wait(for: [expectation], timeout: 2)

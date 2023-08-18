@@ -380,8 +380,8 @@
             filePath = "WanderView/Views/NewsFeedViewController/TableView/NewsFeedTableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -396,8 +396,8 @@
             filePath = "WanderView/Views/NewsFeedViewController/TableView/NewsFeedTableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -412,8 +412,8 @@
             filePath = "WanderView/Views/NewsFeedViewController/TableView/NewsFeedTableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "setupTableView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -428,8 +428,8 @@
             filePath = "WanderView/Views/NewsFeedViewController/NewsFeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "setUpTableView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -682,6 +682,181 @@
                   startingLineNumber = "53"
                   endingLineNumber = "53"
                   offsetFromSymbolStart = "644">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17FB6ECD-A162-40F5-B8F7-5C69F55C7F95"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WanderView/Views/TouristProfileViewController/TouristProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "backButtonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89BD0BBA-BE19-4E5A-8645-2989B9070E3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WanderView/Views/TouristProfileViewController/TouristProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "backButton"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "89BD0BBA-BE19-4E5A-8645-2989B9070E3E - 83b78be594872359"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIButton in variable initialization expression of WanderView.TouristProfileViewController.backButton : __C.UIButton"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristProfileViewController/TouristProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "89BD0BBA-BE19-4E5A-8645-2989B9070E3E - 83b78be594872359"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIButton in variable initialization expression of WanderView.TouristProfileViewController.backButton : __C.UIButton"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristProfileViewController/TouristProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C727013E-CE9A-49A2-8D1F-CF875ACDEDC4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "backButtonNotificationReceived()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C727013E-CE9A-49A2-8D1F-CF875ACDEDC4 - e9969d35bf4c2d57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WanderView.TouristsTableView.backButtonNotificationReceived() -&gt; ()"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "C727013E-CE9A-49A2-8D1F-CF875ACDEDC4 - e9969d35bf4c2d34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WanderView.TouristsTableView.backButtonNotificationReceived() -&gt; ()"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "C727013E-CE9A-49A2-8D1F-CF875ACDEDC4 - f75748c5a8cc64cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIView) -&gt; () in WanderView.TouristsTableView.backButtonNotificationReceived() -&gt; ()"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57ECF32E-6F0C-43CD-8A0F-6B24CBBD9455"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "TouristsTableView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "57ECF32E-6F0C-43CD-8A0F-6B24CBBD9455 - e9969d35bf4c2d57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WanderView.TouristsTableView.backButtonNotificationReceived() -&gt; ()"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "57ECF32E-6F0C-43CD-8A0F-6B24CBBD9455 - e9969d35bf4c2d34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WanderView.TouristsTableView.backButtonNotificationReceived() -&gt; ()"
+                  moduleName = "WanderView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stevehechio/XcodeStudioProjects/WanderView/WanderView/Views/TouristsListViewController/TableView/TouristsTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>

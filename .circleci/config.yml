@@ -1,51 +1,24 @@
 # .circleci/config.yml
-version: 2
+version: 2.1
+
 jobs:
   build-and-test:
     macos:
       xcode: 14.0.1
-    working_directory: /Users/distiller/project
-    environment:
-      FL_OUTPUT_DIR: output
-      FASTLANE_LANE: test
-    shell: /bin/bash --login -o pipefail
     steps:
       - checkout
-      - run: bundle install
-      - run:
-          name: Fastlane
-          command: bundle exec fastlane $FASTLANE_LANE
-      - store_artifacts:
-          path: output
-      - store_test_results:
-          path: output/scan
+      - run: pod install
 
-  adhoc:
-    macos:
-      xcode: 14.0.1
-    working_directory: /Users/distiller/project
-    environment:
-      FL_OUTPUT_DIR: output
-      FASTLANE_LANE: adhoc
-    shell: /bin/bash --login -o pipefail
-    steps:
-      - checkout
-      - run: bundle install
+      # Build and test your iOS app
       - run:
-          name: Fastlane
-          command: bundle exec fastlane $FASTLANE_LANE
-      - store_artifacts:
-          path: output/Game.ipa
+          name: Build and Test
+          command: |
+            xcodebuild clean build -scheme WanderView -workspace WanderView.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11'
+            xcodebuild test -scheme WanderView -workspace WanderView.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11'
 
 workflows:
-  version: 2
-  build-test-adhoc:
+  build-test:
     jobs:
       - build-and-test
-      - adhoc:
-          filters:
-            branches:
-              only: development
-          requires:
-            - build-and-test
+
 

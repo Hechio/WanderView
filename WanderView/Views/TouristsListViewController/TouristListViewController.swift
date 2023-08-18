@@ -17,6 +17,7 @@ class TouristListViewController: UIViewController {
         setUpTableView()
     }
     func setUpTableView() {
+        view.backgroundColor = UIColor(named: "background")
         tableView = TouristsTableView(frame: view.frame, controller: self)
         view.addSubview(tableView)
     }

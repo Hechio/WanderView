@@ -18,5 +18,4 @@ protocol ApiService {
 enum Endpoint: String {
   case newsFeed = "api/Feed/GetNewsFeed"
   case tourists = "api/Tourist"
-  case tourist = "api/Tourist/"
 }

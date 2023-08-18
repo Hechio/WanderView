@@ -10,73 +10,46 @@ import UIKit
 
 class TouristsTableView: UIView {
     
-    /*
-     To trigger the segue to CryptoDetailViewController
-     when a cell is tapped on.
-     */
-    private var controller: UIViewController!
-    
     // MARK: - Properties
+    private var controller: UIViewController!
+    private var profileViewController = TouristProfileViewController()
+    
+    var titleLable: UILabel!
     var tableView: UITableView!
     let cellID = "TouristsTableCell"
-    
-    private let backButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Back", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.isHidden = true
-        button.addTarget(TouristsTableView.self, action: #selector(backButtonTapped), for: .touchUpInside)
-        return button
-    }()
-    
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Tourist Profile"
-        label.textAlignment = .center
-        return label
-    }()
     
     internal var viewModel = TouristsListViewModel()
     
     override init(frame: CGRect) {
-      super.init(frame: frame)
+        super.init(frame: frame)
+    }
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(controller!, name: Notification.Name("BackButtonClicked"), object: nil)
     }
     
     convenience init(frame: CGRect, controller: UIViewController) {
         self.init(frame: frame)
         self.controller = controller
         setupUI()
-          viewModel.delegate = self
-          viewModel.fetchData(page: 1)
+        viewModel.delegate = self
+        viewModel.fetchData(page: 1)
+        NotificationCenter.default.addObserver(self, selector: #selector(backButtonNotificationReceived), name: Notification.Name("BackButtonClicked"), object: nil)
     }
-
+    
     
     required init?(coder: NSCoder) {
-      super.init(coder: coder)
+        super.init(coder: coder)
     }
     
     func setupUI(){
-        backgroundColor = .white
-        
-        // Add title label
-        addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        
-        // Add back button
-        addSubview(backButton)
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
-        backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        
+        backgroundColor = UIColor(named: "background")
         setupTableView()
         
     }
     
     func setUpProfile(indexPath: IndexPath){
-        let profileViewController = TouristProfileViewController()
         let cellViewModel = viewModel.cellViewModels[indexPath.row]
         profileViewController.tourist = Tourist(
             id: cellViewModel.id,
@@ -87,36 +60,61 @@ class TouristsTableView: UIView {
             createdAt: cellViewModel.createdAt
         )
         willRemoveSubview(tableView)
-        backButton.isHidden = false
         addSubview(profileViewController.self.view)
         
     }
     // MARK: - Setup Methods
     
     func setupTableView() {
-     ActivityIndicatorHelper.shared.show(in: self)
-      
-      tableView = UITableView(frame: frame, style: .plain)
-      tableView.backgroundColor = .white
-      
-      tableView.delegate = self
-      tableView.dataSource = self
-      tableView.prefetchDataSource = self
-      
-      tableView.register(TouristsCell.self, forCellReuseIdentifier: cellID)
-      
-      tableView.bounces = false
-      tableView.separatorStyle = .none
-      tableView.showsVerticalScrollIndicator = false
-      tableView.contentInset.top = 8
-      tableView.contentInset.bottom = 20
-      
+        titleLable = getTitleLabel()
+        addSubview(titleLable)
+        titleLable.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLable.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            titleLable.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLable.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleLable.heightAnchor.constraint(equalToConstant: 44)
+        ])
+        ActivityIndicatorHelper.shared.show(in: self)
+        
+        tableView = UITableView(frame: frame, style: .plain)
+        tableView.backgroundColor = .white
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.prefetchDataSource = self
+        
+        tableView.register(TouristsCell.self, forCellReuseIdentifier: cellID)
+        
+        tableView.bounces = false
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.contentInset.top = 8
+        tableView.contentInset.bottom = 20
+        
         addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: titleLable.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+        ])
     }
     
-    @objc private func backButtonTapped() {
+    @objc private func backButtonNotificationReceived() {
+        profileViewController = TouristProfileViewController()
         subviews.forEach { $0.removeFromSuperview() }
         setupUI()
+    }
+    
+    func getTitleLabel() -> UILabel {
+        let newLabel = ViewHelper.createLabel(
+            with: UIColor(named: "AccentColor") ?? .systemBlue,
+            text: NSLocalizedString("Tourists", comment: ""),
+            alignment: .center, font: UIFont.boldSystemFont(ofSize: 22))
+        return newLabel
     }
 }
 

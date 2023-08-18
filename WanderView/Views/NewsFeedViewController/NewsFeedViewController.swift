@@ -20,6 +20,7 @@ class NewsFeedViewController: UIViewController {
     }
     
     func setUpTableView() {
+        view.backgroundColor = UIColor(named: "background")
         tableView = NewsFeedTableView(frame: view.frame)
         view.addSubview(tableView)
     }
